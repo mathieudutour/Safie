@@ -31,8 +31,8 @@ Template.signup.events({
      profile: {
        trusted: null,
        name: email,
-       timeoutNotification: 3600, // 1 hour
-       timeoutDelete: 604800 // 7 days
+       timeoutNotification: 1, // 1 hour
+       timeoutDelete: 7 // 7 days
      }
    }, function (error) {
      if (error) {

@@ -26,7 +26,7 @@ if (Meteor.isCordova) {
                   localisation: window.currentLocation,
                   userId: Meteor.userId(),
                   createdAt: new Date(),
-                  removeAt: new Date((new Date()).getTime() + Meteor.user().profile.timeoutDelete*60000) ,
+                  removeAt: new Date((new Date()).getTime() + Meteor.user().profile.timeoutDelete*86400000) ,
                   triggerAt: new Date((new Date()).getTime() + Meteor.user().profile.timeoutNotification*60000),
                   triggered: false
                 }, function(err, id) {console.log(err); console.log(id);});
