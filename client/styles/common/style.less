@@ -1,6 +1,8 @@
+
 @main-color: #0098A6;
 @main-variation: #00C9DB;
 @main-variation-dark: #004D54;
+
 
 .title {
     text-align: center;
@@ -27,6 +29,18 @@
     border: 0px;
     margin-top: 60px;
     margin-bottom: 30px;
+    border: 0px;
+}
+
+#emailTextfield {
+    background-color: transparent;
+    text-align: left;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid cornsilk;
+    font-size: 80px;
+    outline-width: 0;
 }
 
 .textfield {
@@ -50,35 +64,35 @@ body {
 }
 
 #settingsTitle {
- text-align: center;
-margin-top: 5%;
-margin-bottom: 15px;
-    font-size: 50px;
-}
-
-.personalSettings {
- border: 1px solid black;
-    border-bottom: 1px solid black;
-    border-radius: 10px;
-background-color: white;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 50px;
 }
 
 .label {
- float: left;
-    margin: 10px;
-    width: 400px;
-    font-size: 22px;
-    color: gray;
+  float: left;
+  margin: 10px;
+  width: 400px;
+  width: 325px;
+  font-family: 'Avenir';
+  font-size: 22px;
+  color: gray;
+
 }
 
 #submitSettings {
     text-align: center;
     border-radius: 10px;
-    border: 1px solid cornsilk;
-    background-color: cornsilk;
+    border: 1px solid #0098A6;
+    background-color: #0098A6;
+    color: white;
     width: 300px;
     margin: 5px;
     margin-top: 15px;
+    margin-bottom: 20px;
     font-size: 24px;
 }
 
@@ -102,10 +116,10 @@ background-color: white;
 }
 
 .settingsClass {
- background-color: cornsilk;
+ background-color: white;
 }
 
-.settingSubsection {
+.settingSubsectionTitle {
  margin: 15px; 
 font-size: 22px;
  margin: 15px;
@@ -126,10 +140,15 @@ font-size: 22px;
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
+    font-size: 22px;
+}
+
+.settingSubsection {
     margin: 15px;
 }
 
 .landing-inner {
   overflow: auto;
   height: 100%;
+background-color: #0098A6;
 }
