@@ -17,7 +17,6 @@ Template.history.helpers({
     });
   },
   'isUnsafe': function() {
-    return true;
     var lastPicture = Pictures.findOne({userId: Meteor.userId()}, {sort: [['createdAt', -1]], limit: 1});
     return lastPicture && lastPicture.triggerAt < new Date();
   }
