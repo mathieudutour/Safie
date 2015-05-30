@@ -14,5 +14,9 @@ Template.settings.events({
     var code = t.find('#code').value;
 
     Meteor.users.update(Meteor.userId(), {$set:{'profile.name': name, 'profile.trusted': trusted, 'profile.timeoutDelete': deleteTime, 'profile.timeoutNotification': notif}});
+
+    if (code && code !== "") {
+      Meteor.users.update(Meteor.userId(), {$set:{'profile.code': parseInt(code)}});
+    }
   }
 });
