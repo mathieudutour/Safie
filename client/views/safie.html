@@ -39,8 +39,42 @@
     </div>
 </template>
 
-<template name="enterCode">
-Enter Code
+<template name="pincode">
+<div class="pincodeClass">
+<form id="pinView">
+    <h2 class="viewTitle">Enter Pin:</h2>
+    <div class="enteredPin">
+        <input id="pin1" type="password" maxlength="1" />
+        <input id="pin2" type="password" maxlength="1"/>
+        <input id="pin3" type="password" maxlength="1"/>
+        <input id="pin4" type="password" maxlength="1"/>
+    </div>
+</form>
+<form id="enterPinForm">
+    <div class="keypad">
+        <div>
+            <button id="1" class="pinButton">1</button>
+            <button id="2" class="pinButton">2</button>
+            <button id="3" class="pinButton">3</button>
+        </div>
+        <div>
+            <button id="4" class="pinButton">4</button>
+            <button id="5" class="pinButton">5</button>
+            <button id="6" class="pinButton">6</button>
+        </div>
+        <div>
+            <button id="7" class="pinButton">7</button>
+            <button id="8" class="pinButton">8</button>
+            <button id="9" class="pinButton">9</button>
+        </div>
+        <div>
+            <button id="0" class="pinButton"> &nbsp; </button>
+            <button id="0" class="pinButton">0</button>
+            <button id="bkspc" class="pinButton">bkspc</button>
+        </div>
+    </div>
+</form>
+</div>
 </template>
 
 <template name="center">
