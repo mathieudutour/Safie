@@ -20,7 +20,6 @@ if (Meteor.isCordova) {
             var reader = new FileReader();
             reader.onloadend = function (evt) {
               console.log("read success");
-              console.log(evt.target.result);
               Pictures.insert({
                 data: evt.target.result,
                 localisation: window.currentLocation,
@@ -28,7 +27,7 @@ if (Meteor.isCordova) {
                 createdAt: new Date(),
                 removeAt: new Date() + Meteor.user().profile.timeoutDelete,
                 triggerAt: new Date() + Meteor.user().profile.timeoutNotification,
-              });
+              }, function(err, id) {console.log(err); console.log(id);});
             };
             reader.readAsDataURL(file);
           }
