@@ -1,13 +1,11 @@
-Template.landing.events({
-'click #login': function(e){
-    e.preventDefault();
+Template.landing.events ({
+'click #login': function(){
+    console.log("login pressed view not changed");
     Session.set('view', 'camera');
+    console.log(Session.get('view'));
+    console.log("login view changedpressed");
 },
-'click #signup': function(e){
-    e.preventDefault();
+'click #signup': function(){
     Session.set('view', 'camera');
-},
-  'submit': function(e){
-    e.preventDefault();
 }
 });
