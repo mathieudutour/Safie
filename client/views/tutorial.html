@@ -1,0 +1,64 @@
+<template name="tutorial">
+   <div class="wrapper">
+    {{>swipe Swiper=Swiper}}
+  </div>
+</template>
+
+<template name="stepOne">
+    <div class="tutorialClass"> 
+        <h1 class="tutorialMain">SAFIE</h1>
+        <div class="logo">
+            <img id="cameraImg" src="http://localhost:3000/camera2.png" alt="Camera">
+        </div>
+        <!--<h2 class="tutorialStep">It's Not Personal</h2>-->
+        <p class="swipeText" id="swipteText1">Swipe to learn how to get started, or <a href="http://www.facebook.com" class="skip">SKIP</a></p>
+        <div class="swipeCircles">
+            <div class="selectedCircle"></div>
+            <div class="unselectedCircle"></div>
+            <div class="unselectedCircle"></div>
+            <div class="unselectedCircle"></div>
+        </div>
+    </div>
+</template>
+
+<template name="stepTwo">
+    <div class="tutorialClass">
+        <h2 class="tutorialTitle">Step One</h2><br>
+        <h3 class="tutorialStep">Take a photo </h3>
+        <div class="swipeCircles">
+            <div class="unselectedCircle"></div>
+            <div class="selectedCircle"></div>
+            <div class="unselectedCircle"></div>
+            <div class="unselectedCircle"></div>
+        </div>
+    </div>
+</template>
+
+<template name="stepThree">
+    <div class="tutorialClass">
+        <h2 class="tutorialTitle">Step Two</h2><br>
+        <h3 class="tutorialStep">Enter your trusted person </h3>
+        <div class="swipeCircles">
+            <div class="unselectedCircle"></div>
+            <div class="unselectedCircle"></div>
+            <div class="selectedCircle"></div>
+            <div class="unselectedCircle"></div>
+        </div>
+    </div>
+</template>
+
+<template name="stepFour">
+    <div class="tutorialClass">
+        <h2 class="tutorialTitle">Step Three</h2><br>
+        <h3 class="tutorialStep">Mark "I'm Safe" </h3>
+        <div class="doneButton">
+            <button id="tutorialDone">DONE</button>
+        </div>
+        <div class="swipeCircles">
+            <div class="unselectedCircle"></div>
+            <div class="unselectedCircle"></div>
+            <div class="unselectedCircle"></div>
+            <div class="selectedCircle"></div>
+        </div>
+    </div>
+</template>

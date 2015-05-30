@@ -34,13 +34,13 @@ enterPin = function(pinIndex, pinValue){
     document.getElementById("pin3").value = pinValue;
     if(pinIndex === 3)
     document.getElementById("pin4").value = pinValue;
-    if(pinIndex === null){
+    if(pinIndex === null){ 
         var pin1 = document.getElementById("pin1").value;
         var pin2 = document.getElementById("pin2").value;
         var pin3 = document.getElementById("pin3").value;
         var pin4 = document.getElementById("pin4").value;
-        console.log("Full pin: "+pin1+pin2+pin3+pin4);
-        
+        var fullPin = pin1+pin2+pin3+pin4;
+        console.log("Full pin: "+fullPin);  
     }
 }
 
