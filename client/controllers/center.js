@@ -1,2 +1,0 @@
-//Session.setDefault('goLeft', "false");
-
