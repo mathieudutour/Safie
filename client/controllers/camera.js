@@ -61,11 +61,11 @@ Template.camera.events({
     }
   },
 
-  'click .history': function() {
+  'click .history-button': function() {
     Swiper.moveLeft();
   },
 
-  'click .settings': function() {
+  'click .settings-button': function() {
     Swiper.moveRight();
   }
 });
