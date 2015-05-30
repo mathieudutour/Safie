@@ -8,3 +8,5 @@ meteor-platform
 less
 reactive-var
 coffeescript
+pagebakers:ionicons
+mdg:geolocation
