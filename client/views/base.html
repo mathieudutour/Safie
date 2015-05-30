@@ -1,0 +1,14 @@
+<head>
+    <title>Safie</title>
+</head>
+<body>
+    {{> router }}
+</body>
+
+<template name="router">
+    {{#if goToApp }}
+        {{> camera }}
+    {{else }}
+        {{> landing }}
+    {{/if}}
+</template>
