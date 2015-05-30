@@ -3,15 +3,15 @@
 </template>
 
 <template name="pincode">
-  <div class="pincodeClass">
+  <div class="pincode">
   <form id="pinView">
-      <h2 class="viewTitle">Enter Pin:</h2>
       <div class="enteredPin">
           <input id="pin1" type="password" readonly="readonly" maxlength="1" />
           <input id="pin2" type="password" readonly="readonly" maxlength="1"/>
           <input id="pin3" type="password" readonly="readonly" maxlength="1"/>
           <input id="pin4" type="password" readonly="readonly" maxlength="1"/>
       </div>
+    <button type="submit" class="pin-submit">I'm safe</button>
   </form>
   <form id="enterPinForm">
       <div class="keypad">
@@ -33,7 +33,7 @@
           <div>
               <button id="blankspace" class="pinButton"> &nbsp; </button>
               <button id="0" class="pinButton">0</button>
-              <button id="bkspc" class="pinButton">bkspc</button>
+              <button id="bkspc" class="pinButton">del</button>
           </div>
       </div>
   </form>
