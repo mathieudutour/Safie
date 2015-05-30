@@ -3,36 +3,39 @@
     <i class="camera ion-ios-camera"></i>
     <h2>Settings</h2>
   </header>
-  <form>
-    <div class="settingSubsectionTitle"> PERSONAL </div>
-    <div class="settingSubsection">
-      <div class="label">Name:
-        <br>
-        <input class="textfield" type="text">
-      </div>
-      <div class="label">Deactivation Code:
-        <br>
-        <input class="textfield" type="password">
-      </div>
-    </div>
-    <div class="settingSubsectionTitle"> NOTIFICATIONS </div>
-    <div class="settingSubsection">
+  <div  class="scrollable full-settings">
+    <form>
+      <div class="settingSubsectionTitle"> PERSONAL </div>
+      <div class="settingSubsection">
 
-      <div class="label">Trusted Person's Email:
-        <br>
-        <input class="textfield" type="email">
+        <div class="label">Name: </div>
+        <input class="textfield-dark" type="text"><br>
+
+        <div class="label">Deactivation Code:</div>
+        <input class="textfield-dark" type="password"><br>
+
       </div>
-      <div class="label">Min Storage Days:
-        <br>
-        <input class="textfield" type="number">
+
+
+      <div class="settingSubsectionTitle"> NOTIFICATIONS </div>
+      <div class="settingSubsection">
+
+        <div class="label">Trusted Person's Email:</div>
+        <input class="textfield-dark" type="email"><br>
+
+        <div class="label">Min Storage Days:</div>
+        <input class="textfield-dark" type="number" min="1"><br>
+
+        <div class="label">Notification Time:</div>
+        <input class="textfield-dark" type="number" min="0"><br>
+
       </div>
-      <div class="label">Notification Time:
-        <br>
-        <input class="textfield" type="number">
+      <div class="settingsBtns">
+          <button class="settingsBtn" id="submitSettings">Submit Changes</button>
+          <button class="settingsBtn" id="logout">Log out!</button>
       </div>
-    </div>
-    <div class="submitButton">
-      <button id="submitSettings">Submit Changes</button>
-    </div>
+
   </form>
+  </div>
+
 </template>
