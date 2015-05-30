@@ -1,8 +1,8 @@
 Template.router.helpers({
-goToApp: function () {
-    console.log("in goToApp");
-    console.log("Session:");
-    console.log(Session.get('view'));
-    return Session.equals('view','camera');
-}
+  loginPage: function () {
+      return Router.isCurrentPage(Router.Page.LOGIN);
+  },
+  signupPage: function () {
+      return Router.isCurrentPage(Router.Page.SIGNUP);
+  }
 });
