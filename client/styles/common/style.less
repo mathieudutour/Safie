@@ -1,83 +1,52 @@
+@main-color: #0098A6;
+@main-variation: #00C9DB;
+@main-variation-dark: #004D54;
+
 .title {
     text-align: center;
-    margin-top: 45%;
+    margin-top: 40%;
     color:cornsilk;
-    font-size: 150px;
+    font-size: 50px;
+}
+.login-menu {
+  bottom: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.greeting {
+    text-align: center;
+    margin-top: 20%;
+    color:cornsilk;
+    font-size: 38px;
 }
 
 .inputFields {
     text-align: center;
     border-radius: 22.5px;
-    border: 0px solid transparent;
+    border: 0px;
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 
-.landingButton {
-    text-align: center;
-    border-radius: 22.5px;
-    border: apx solid transparent;
-}
-
-#emailTextfield {
+.textfield {
     background-color: transparent;
-    text-align: left;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
     border-bottom: 1px solid cornsilk;
-    font-size: 80px;
+    font-size: 25px;
     outline-width: 0;
+    width: 80%;
 }
-
-#passwordTextfield {
-    background-color: transparent;
-    text-align: left;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 1px solid cornsilk;
-    font-size: 80px;
-    outline-width: 0;
-    
-}
-
-#login {
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid cornsilk;
-    background-color: cornsilk;
-    width: 650px;
-    margin: 5px;
-    margin-top: 120px;
-    font-size: 70px;
-}
-
-#signup {
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid cornsilk;
-    background-color: cornsilk;
-    width: 650px;
-    margin: 40px;
-    font-size: 70px;
-}
-
-//
-//div {
-//position: fixed;
-//position: absolute;
-//top: 0;
-//right: 0;
-//bottom: 0;
-//left: 0;
-//}
 
 body {
- background-color: #0098A6;
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: @main-color;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .landingClass {
-    background-color: #0098A6;
+    background-color: @main-color;
 }
 
 #settingsTitle {
@@ -102,19 +71,6 @@ background-color: white;
     color: gray;
 }
 
-.textfield {
-    float: left;
-    background-color: transparent;
-    border-bottom: 1px solid black;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    text-align: left;
-    width: 370px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
 #submitSettings {
     text-align: center;
     border-radius: 10px;
@@ -128,8 +84,21 @@ background-color: white;
 
 .submitButton {
     text-align: center;
-    border-radius: 22.5px;
-    border: apx solid transparent;
+    border-radius: 27px;
+    display: block;
+    background-color: cornsilk;
+    border-color: @main-variation-dark;
+    height: 40px;
+    width: 280px;
+    margin: 0 auto;
+}
+
+.linkButton {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  text-align: center;
+  width: 100%;
 }
 
 .settingsClass {
