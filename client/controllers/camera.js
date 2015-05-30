@@ -12,8 +12,32 @@ if (Meteor.isCordova) {
 
     // handle picture taken
     cordova.plugins.camerapreview.setOnPictureTakenHandler(function(result){
-        document.getElementById('originalPicture').src = result[0];//originalPicturePath;
-        document.getElementById('previewPicture').src = result[1];//previewPicturePath;
+      window.resolveLocalFileSystemURI(result[0],
+        // success callback; generates the FileEntry object needed to convert to Base64 string
+        function (fileEntry) {
+          // convert to Base64 string
+          function win(file) {
+            var reader = new FileReader();
+            reader.onloadend = function (evt) {
+              console.log("read success");
+              console.log(evt.target.result);
+              Pictures.insert({
+                data: evt.target.result,
+                localisation: window.currentLocation,
+                userId: Meteor.userId(),
+                createdAt: new Date(),
+                removeAt: new Date() + Meteor.user().profile.timeoutDelete,
+                triggerAt: new Date() + Meteor.user().profile.timeoutNotification,
+              });
+            };
+            reader.readAsDataURL(file);
+          }
+          var fail = function (evt) {console.log(evt);};
+          fileEntry.file(win, fail);
+        },
+        // error callback
+        function (err) {console.log(err);}
+      );
     });
   });
 }
