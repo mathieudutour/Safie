@@ -1,5 +1,8 @@
 Template.router.helpers({
 goToApp: function () {
-    return Session.get('view') === 'camera';
+    console.log("in goToApp");
+    console.log("Session:");
+    console.log(Session.get('view'));
+    return Session.equals('view','camera');
 }
 });
