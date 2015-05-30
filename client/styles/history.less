@@ -16,4 +16,40 @@
       text-align: right;
     }
   }
+
+  .photo {
+    border-bottom: 1px solid @silver;
+    height: 60px;
+    .status {
+      float: left;
+      height: 60px;
+      width: 60px;
+      font-size: 50px;
+      text-align: center;
+      .triggered {
+        color: @pomegranate;
+      }
+      .not-triggered {
+        color: @nephritis;
+      }
+      .unsafe {
+        color: @carrot;
+      }
+    }
+    .timestamp, .location {
+      i {
+        width: 50px;
+        padding-left: 15px;
+        position: relative;
+        top: 3px;
+        line-height: 20px;
+        text-align: center;
+        display: inline-block;
+      }
+      span {
+        font-size: 0.5em;
+        line-height: 20px;
+      }
+    }
+  }
 }

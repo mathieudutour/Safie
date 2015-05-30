@@ -5,7 +5,7 @@ Pictures.allow({
     return true;
   },
   update: function(userId, doc, fields, modifier) {
-    return false;
+    return true;
   },
   remove: function(userId, doc) {
     return false;
@@ -22,6 +22,7 @@ Pictures.allow({
 	createdAt,
 	removeAt,
     triggerAt,
+    triggered
 }
 
 */
