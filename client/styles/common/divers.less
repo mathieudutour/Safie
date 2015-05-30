@@ -40,7 +40,7 @@ html, body {
   width: 40px;
   height: 50px;
   font-size: 20px;
-  color: cornsilk;
+  color: #FFF;
   position: absolute;
   left: 0;
   top: 60%;
@@ -52,16 +52,12 @@ html, body {
 
 a {
   text-decoration: none;
-  color: @inverse-color;
+  color: #FFF;
   cursor: pointer;
 }
 
 a:active, a:hover {
   text-decoration: underline;
-}
-
-.inverse {
-  color: @secondary-color;
 }
 
 .hide {
@@ -74,12 +70,4 @@ a:active, a:hover {
 
 .leave-down {
   .animation(down @time-factor*500ms linear forwards);
-}
-
-hr {
-  clear: both;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0px solid @primary-color;
-  border-bottom: 1px solid #e1e4e6;
 }
