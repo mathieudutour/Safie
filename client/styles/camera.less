@@ -1,39 +1,53 @@
 .camera {
+  .flash {
+    color: #FFF;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 2em;
+    width: 75px;
+    height: 75px;
+  }
 
-}
+  .reverse-camera {
+    color: #FFF;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2em;
+    width: 75px;
+    text-align: right;
+    height: 75px;
+  }
 
-.flash {
-  border: 0;
-  background: transparent;
-  color: #FFF;
-  position: absolute;
-  top: 10px;
-  left: 15px;
-  font-size: 2em;
-  width: 75px;
-  height: 75px;
-}
+  .take-picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: fade(#FFF, 30);
+    border: 5px solid fade(#FFF, 50);
+    position: absolute;
+    bottom: 10px;
+    left: ~'calc(50% - 35px)';
+  }
 
-.reverse-camera {
-  border: 0;
-  background: transparent;
-  color: #FFF;
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 2em;
-  width: 75px;
-  text-align: right;
-  height: 75px;
-}
-
-.take-picture {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: fade(#FFF, 30);
-  border: 5px solid fade(#FFF, 50);
-  position: absolute;
-  bottom: 10px;
-  left: ~'calc(50% - 35px)';
+  .history {
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    font-size: 1.7em;
+    width: 75px;
+    height: 75px;
+  }
+  .settings {
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    font-size: 1.7em;
+    text-align: right;
+    width: 75px;
+    height: 75px;
+  }
 }

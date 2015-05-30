@@ -58,5 +58,13 @@ Template.camera.events({
     if (Meteor.isCordova) {
       cordova.plugins.camerapreview.takePicture({maxWidth:640, maxHeight:640});
     }
+  },
+
+  'click .history': function() {
+    Swiper.moveLeft();
+  },
+
+  'click .settings': function() {
+    Swiper.moveRight();
   }
 });
