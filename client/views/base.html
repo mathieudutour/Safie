@@ -8,10 +8,12 @@
 </body>
 
 <template name="router">
-    {{#if goToApp }}
-        {{> center }}
+    {{#if loginPage }}
+        {{> login }}
+    {{else}}{{#if signupPage }}
+        {{> signup }}
     {{else}}
         {{> landing }}
-    {{/if}}
+    {{/if}}{{/if}}
 </template>
 

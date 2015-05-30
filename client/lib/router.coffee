@@ -7,13 +7,9 @@
   LOGIN:
     index: 1
     url: '/login'
-  SHOP_LOGIN:
+  SIGNUP:
     index: 2
-    url: '/shop/login'
-  SHOP_CONFIG:
-    index: 3
-    protected: true
-    url: '/shop/admin'
+    url: '/signup'
 
 Meteor.startup () ->
   paths = window.location.pathname
@@ -24,21 +20,13 @@ Meteor.startup () ->
     else # paths is '/'
       Router._moveToPage Router.Page.LANDING.index
   else
-    paths = paths.split('/')
-    paths.shift()
-    if paths.length > 0
-      if "/#{paths[0]}/" is Router.Page.SHOP_MENU.url
-        Session.set('shopId', paths[1])
-        Router._moveToPage Router.Page.SHOP_MENU.index
-    else
-      Router._moveToPage Router.Page.LANDING.index
+    Router._moveToPage Router.Page.LANDING.index
 
 window.addEventListener('popstate', (e) ->
   page = e.state
   if !page?
-    Router._moveToPage Router.Page.CARDS
+    Router._moveToPage Router.Page.LANDING
   else
-    Session.set('shopId', page.shopId)
     Router._moveToPage page.pageIndex
 )
 
@@ -59,22 +47,13 @@ window.addEventListener('popstate', (e) ->
   else
     Session.set('direction', null)
 
-@Router.goToPage = (page, shopId) ->
-  Session.set('shopId', shopId)
-  url = page.url + if shopId? then shopId else ""
-  history.pushState({pageIndex: page.index, shopId: shopId}, null, url)
+@Router.goToPage = (page) ->
+  url = page.url
+  history.pushState({pageIndex: page.index}, null, url)
   Router._moveToPage page.index
 
 @Router.goToPreviousPage = () ->
   page = _.findWhere Page, {index: Session.get('previous_page')}
-  Router.goToPage page, null
-
-
-@Router.goToLeft = () ->
-  page = _.findWhere Page, {index: Math.min(Math.max(Session.get('page') - 1, 0), 4)}
-  Router.goToPage page, null
-@Router.goToRight = () ->
-  page = _.findWhere Page, {index: Math.min(Math.max(Session.get('page') + 1, 0), 4)}
   Router.goToPage page, null
 
 @Router.isCurrentPage = (page) ->
