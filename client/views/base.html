@@ -8,12 +8,14 @@
 </body>
 
 <template name="router">
-    {{#if loginPage }}
-        {{> login }}
-    {{else}}{{#if signupPage }}
-        {{> signup }}
-    {{else}}
-        {{> landing }}
-    {{/if}}{{/if}}
+  {{#if loginPage }}
+    {{> login }}
+  {{else}}{{#if signupPage }}
+    {{> signup }}
+  {{else}}{{#if pinPage }}
+    {{> pincode }}
+  {{else}}
+    {{> landing }}
+  {{/if}}{{/if}}{{/if}}
 </template>
 
