@@ -1,5 +1,4 @@
 Swiper = new Swipe(['camera', 'settings', 'history'])
-console.log Swiper
 
 Template.center.helpers
   Swiper: -> Swiper
