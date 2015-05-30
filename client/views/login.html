@@ -1,11 +1,17 @@
 <template name="landing">
 
-    <h2>Safie</h2>
+    <h2 class="title">Safie</h2>
     <form>
-        <input type="email" placeholder="Email..."><br>
-        <input type="password" placeholder="Password..."><br>
-        <button id="login">Log In</button>
-        <button id="signup">Sign Up</button>
+        <div class="inputFields">
+            <input id="emailTextfield" type="email" placeholder="Email..."><br><br>
+            <input id="passwordTextfield" type="password" placeholder="Password..."><br><br>
+        </div>
+        <div class="landingButton">
+            <button id="login">Log In</button>
+        </div>
+        <div class="landingButton">
+            <button id="signup">Sign Up</button>
+        </div>
     </form>
 
 </template>
