@@ -44,10 +44,10 @@
 <form id="pinView">
     <h2 class="viewTitle">Enter Pin:</h2>
     <div class="enteredPin">
-        <input id="pin1" type="password" maxlength="1" />
-        <input id="pin2" type="password" maxlength="1"/>
-        <input id="pin3" type="password" maxlength="1"/>
-        <input id="pin4" type="password" maxlength="1"/>
+        <input id="pin1" type="password" readonly="readonly" maxlength="1" />
+        <input id="pin2" type="password" readonly="readonly" maxlength="1"/>
+        <input id="pin3" type="password" readonly="readonly" maxlength="1"/>
+        <input id="pin4" type="password" readonly="readonly" maxlength="1"/>
     </div>
 </form>
 <form id="enterPinForm">
@@ -68,7 +68,7 @@
             <button id="9" class="pinButton">9</button>
         </div>
         <div>
-            <button id="0" class="pinButton"> &nbsp; </button>
+            <button id="blankspace" class="pinButton"> &nbsp; </button>
             <button id="0" class="pinButton">0</button>
             <button id="bkspc" class="pinButton">bkspc</button>
         </div>
