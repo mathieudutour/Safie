@@ -111,7 +111,8 @@ Template.pincode.events({
     Session.set('error', null);
 
     Meteor.call('security_code', code, function(result) {
-      if (result.success) {
+      console.log(result)
+      if (result && result.success) {
         Session.set('success', 'Safe and Sound :)');
       } else {
         Session.set('error', 'Safies released');
