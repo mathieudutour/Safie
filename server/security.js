@@ -1,13 +1,12 @@
 Meteor.methods({
 	'security_code' : function(code) {
-      check(code, Number);
 
-      return Meteor.wrapAsync(function() {
-        var user = Meteor.users.findOne(this.userId);
-        var lastPicture = Pictures.findOne({userId: this.userId}, {sort: [['createdAt', -1]], limit: 1});
+      var asyncFunc = function(userId, callback) {
+        var user = Meteor.users.findOne(userId);
+        var lastPicture = Pictures.findOne({userId: userId}, {sort: [['createdAt', -1]], limit: 1});
         if(parseInt(user.profile.code) === code) {
           Pictures.update({_id: lastPicture._id}, {$set: {triggered: false}});
-          return {success: true};
+          callback(null, {success: true});
         } else {
           Pictures.update({_id: lastPicture._id}, {$set: {triggered: true}});
           if (user.profile.trusted) {
@@ -18,8 +17,14 @@ Meteor.methods({
               html: EmailTemplate.check(user, lastPicture)
             });
           }
-          return {success: true};
+          callback(null, {success: false});
         }
-      });
+      };
+
+      var syncFunc = Meteor.wrapAsync(asyncFunc);
+
+      var res = syncFunc(this.userId); // Errors will be thrown
+
+      return res;
 	},
 });
