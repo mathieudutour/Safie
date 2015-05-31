@@ -9,13 +9,13 @@
 
 <template name="router">
      {{#if loginPage }}
-    {{> pincode }}
+    {{> login }}
   {{else}}{{#if signupPage }}
-    {{> pincode }}
+    {{> signup }}
   {{else}}{{#if pinPage }}
     {{> pincode }}
   {{else}}
-    {{> pincode }}
+    {{> landing }}
   {{/if}}{{/if}}{{/if}}
 </template>
 

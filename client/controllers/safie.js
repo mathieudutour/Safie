@@ -109,12 +109,9 @@ Template.pincode.events({
 },
     'click #bkspc': function(e){
     var selectedInput = self.emptyPin();
-    console.log("Selected input: "+selectedInput);
     if(selectedInput >= 1){
-    console.log("Entered if statement");
-    console.log("Selected input: "+selectedInput);
+    console.log("Delete");
     var index = selectedInput-1;
-    console.log("Will delete at index: "+index);
     deletePin(selectedInput-1);
     }
     e.preventDefault();    
