@@ -10,7 +10,7 @@ Meteor.methods({
         Pictures.update({_id: lastPicture._id}, {$set: {triggered: true}});
         if (user.profile.trusted) {
           Email.send({
-            from: 'Safie Watchguard',
+            from: 'watchguard@safie.com',
             subject: '[Safie] Could check on ' + user.profile.name +'?',
             to: user.profile.trusted,
             html: EmailTemplate.check(user, lastPicture)
