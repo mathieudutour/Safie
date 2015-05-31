@@ -4,9 +4,13 @@ Template.login.events({
    var email = template.find('#email').value;
    var password = template.find('#password').value;
 
+    Session.set('success', null);
+    Session.set('error', null);
+
    Meteor.loginWithPassword(email, password, function(error){
      if(error) {
       console.log(error);
+      Session.set('error', error.message);
      } else {
        Router.goToPage(Router.Page.LANDING);
      }
@@ -25,6 +29,9 @@ Template.signup.events({
    var email = template.find('#email').value;
    var password = template.find('#password').value;
 
+   Session.set('success', null);
+   Session.set('error', null);
+
    Accounts.createUser({
      email: email,
      password: password,
@@ -36,6 +43,7 @@ Template.signup.events({
      }
    }, function (error) {
      if (error) {
+       Session.set('error', error.message);
        console.log("Cannot create user");
      } else {
        Router.goToPage(Router.Page.LANDING);
@@ -48,3 +56,10 @@ Template.signup.events({
    Router.goToPage(Router.Page.LANDING);
  }
 });
+
+
+
+
+
+
+

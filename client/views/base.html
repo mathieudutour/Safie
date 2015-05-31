@@ -4,6 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body>
+  {{> notification}}
   {{> router}}
 </body>
 
@@ -19,3 +20,10 @@
   {{/if}}{{/if}}{{/if}}
 </template>
 
+<template name="notification">
+  {{#if show}}
+    <div class="notification {{msgType}}">
+      {{message}}
+    </div>
+  {{/if}}
+</template>

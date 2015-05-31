@@ -13,7 +13,16 @@ Template.settings.events({
     var deleteTime = t.find('#delete').value;
     var code = t.find('#code').value;
 
-    Meteor.users.update(Meteor.userId(), {$set:{'profile.name': name, 'profile.trusted': trusted, 'profile.timeoutDelete': deleteTime, 'profile.timeoutNotification': notif}});
+    Session.set('success', null);
+    Session.set('error', null);
+
+    Meteor.users.update(Meteor.userId(), {$set:{'profile.name': name, 'profile.trusted': trusted, 'profile.timeoutDelete': deleteTime, 'profile.timeoutNotification': notif}}, function(error){
+      if(error){
+        Session.set('error', 'Try again');
+      } else {
+        Session.set('success', 'Changes saved');
+      }
+    });
 
     if (code && code !== "") {
       Meteor.users.update(Meteor.userId(), {$set:{'profile.code': parseInt(code)}});

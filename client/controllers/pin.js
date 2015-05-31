@@ -101,8 +101,15 @@ Template.pincode.events({
     var pin3 = t.find("#pin3").value;
     var pin4 = t.find("#pin4").value;
     var code = parseInt(pin1 + pin2 + pin3 + pin4);
+
+    Session.set('success', null);
+    Session.set('error', null);
+
     Meteor.call('security_code', code, function(success) {
       if (success) {
+          Session.set('success', 'Safe and Sound :)');
+      } else {
+          Session.set('error', 'Safies released');
       }
       Router.goToPage(Router.Page.LANDING);
     });
