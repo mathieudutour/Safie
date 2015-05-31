@@ -9,7 +9,7 @@ var emptyPin = function (t) {
   else if (t.find("#pin4").value === "")
     return 3;
   else
-    return null;
+    return 4;
 };
 
 var enterPin = function (t, pinIndex, pinValue) {
@@ -22,7 +22,7 @@ var enterPin = function (t, pinIndex, pinValue) {
     t.find("#pin3").value = pinValue;
   else if (pinIndex === 3)
     t.find("#pin4").value = pinValue;
-  else if (pinIndex === null) {
+  else if (pinIndex === 4) {
     var pin1 = t.find("#pin1").value;
     var pin2 = t.find("#pin2").value;
     var pin3 = t.find("#pin3").value;
@@ -87,6 +87,11 @@ Template.pincode.events({
     var selectedInput = emptyPin(t);
     enterPin(t, selectedInput, 9);
     e.preventDefault();
+  },
+  'click #0': function(e, t){
+     var selectedInput = emptyPin(t);
+     enterPin(t, selectedInput, 0);
+     e.preventDefault();
   },
   'click #bkspc': function (e, t) {
     var selectedInput = emptyPin(t);
