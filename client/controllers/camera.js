@@ -27,8 +27,7 @@ if (Meteor.isCordova) {
                   userId: Meteor.userId(),
                   createdAt: new Date(),
                   removeAt: new Date((new Date()).getTime() + Meteor.user().profile.timeoutDelete*86400000) ,
-                  triggerAt: new Date((new Date()).getTime() + Meteor.user().profile.timeoutNotification*60000),
-                  triggered: false
+                  triggerAt: new Date((new Date()).getTime() + Meteor.user().profile.timeoutNotification*60000)
                 }, function(err, id) {console.log(err); console.log(id);});
               };
               reader.readAsDataURL(file);

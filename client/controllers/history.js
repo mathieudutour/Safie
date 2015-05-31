@@ -12,13 +12,12 @@ Template.history.events({
 Template.history.helpers({
   'photos': function() {
     return Pictures.find({userId: Meteor.userId()}, {sort: [['createdAt', 'desc']]}).map(function(doc, i) {
-      doc.unsafe = i === 0 && doc.triggerAt < new Date();
+      doc.unsafe = i === 0 && doc.triggerAt > new Date() && typeof doc.triggered === 'undefined';
       return doc;
     });
   },
   'isUnsafe': function() {
     var lastPicture = Pictures.findOne({userId: Meteor.userId()}, {sort: [['createdAt', 'desc']], limit: 1});
-    console.log(lastPicture)
-    return lastPicture && lastPicture.triggerAt < new Date();
+    return lastPicture && lastPicture.triggerAt > new Date() && typeof lastPicture.triggered === 'undefined';
   }
 });
