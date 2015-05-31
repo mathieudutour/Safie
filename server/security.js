@@ -13,7 +13,7 @@ Meteor.methods({
             from: 'Safie Watchguard',
             subject: '[Safie] Could check on ' + user.profile.name +'?',
             to: user.profile.trusted,
-            html: Email.check(user, lastPicture)
+            html: EmailTemplate.check(user, lastPicture)
           });
         }
         return false;
