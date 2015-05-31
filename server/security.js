@@ -1,11 +1,15 @@
 Meteor.methods({
 	'security_code' : function(code) {
       check(code, Number);
+
+      var Future = Npm.require('fibers/future');
+      var future = new Future();
+
       var user = Meteor.users.findOne(this.userId);
       var lastPicture = Pictures.findOne({userId: this.userId}, {sort: [['createdAt', -1]], limit: 1});
       if(parseInt(user.profile.code) === code) {
         Pictures.update({_id: lastPicture._id}, {$set: {triggered: false}});
-        return true;
+        future.return(true);
       } else {
         Pictures.update({_id: lastPicture._id}, {$set: {triggered: true}});
         if (user.profile.trusted) {
@@ -16,7 +20,9 @@ Meteor.methods({
             html: EmailTemplate.check(user, lastPicture)
           });
         }
-        return false;
+        future.return(false);
       }
+
+      return future.wait();
 	},
 });
