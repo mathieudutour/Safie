@@ -102,6 +102,11 @@ Template.pincode.events({
     enterPin(selectedInput, 9);
     e.preventDefault();
 },
+'click #0': function(e){
+    var selectedInput = self.emptyPin();
+    enterPin(selectedInput, 0);
+    e.preventDefault();
+},
     'click #bkspc': function(e){
     var selectedInput = self.emptyPin();
     deletePin(selectedInput-1);
