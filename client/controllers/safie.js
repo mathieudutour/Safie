@@ -21,7 +21,7 @@ emptyPin = function() {
     else if(document.getElementById("pin4").value === "")
         return 3;
     else 
-        return null;
+        return 4;
 }
 
 enterPin = function(pinIndex, pinValue){
@@ -34,7 +34,7 @@ enterPin = function(pinIndex, pinValue){
     document.getElementById("pin3").value = pinValue;
     if(pinIndex === 3)
     document.getElementById("pin4").value = pinValue;
-    if(pinIndex === null){ 
+    if(pinIndex === 4){ 
         var pin1 = document.getElementById("pin1").value;
         var pin2 = document.getElementById("pin2").value;
         var pin3 = document.getElementById("pin3").value;
@@ -109,7 +109,14 @@ Template.pincode.events({
 },
     'click #bkspc': function(e){
     var selectedInput = self.emptyPin();
+    console.log("Selected input: "+selectedInput);
+    if(selectedInput >= 1){
+    console.log("Entered if statement");
+    console.log("Selected input: "+selectedInput);
+    var index = selectedInput-1;
+    console.log("Will delete at index: "+index);
     deletePin(selectedInput-1);
+    }
     e.preventDefault();    
     }
 });
