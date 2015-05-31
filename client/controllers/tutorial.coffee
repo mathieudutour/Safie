@@ -1,4 +1,4 @@
-Swiper = new Swipe(['stepOne', 'stepTwo', 'stepThree', 'stepFour'])
+Swiper = new Swipe(['stepOne', 'stepTwo', 'stepThree', 'stepFour', 'stepFive'])
 
 Template.tutorial.helpers
   Swiper: -> Swiper
@@ -23,4 +23,8 @@ Template.tutorial.rendered = ->
         
     Tracker.autorun ->
     if Swiper.pageIs('stepFour')
-      Swiper.leftRight('stepThree', null)
+      Swiper.leftRight('stepThree', 'stepFive')
+    
+    Tracker.autorun ->
+    if Swiper.pageIs('stepFive')
+      Swiper.leftRight('stepFour', null)

@@ -1,5 +1,5 @@
 <template name="tutorial">
-   <div class="wrapper">
+   <div class="tutorialClass">
     {{>swipe Swiper=Swiper}}
   </div>
 </template>
@@ -7,13 +7,13 @@
 <template name="stepOne">
     <div class="tutorialClass"> 
         <h1 class="tutorialMain">SAFIE</h1>
-        <div class="logo">
-            <img id="cameraImg" src="http://localhost:3000/camera2.png" alt="Camera">
-        </div>
-        <!--<h2 class="tutorialStep">It's Not Personal</h2>-->
+        <h3 class="intro">Feeling Vulnerable?</h3>
+        <h3 class="intro">Cover Your Back.</h3><br>
+        <h4 class="intro">Safie let's you take a photo in a risky situation.</h4><br>
         <p class="swipeText" id="swipteText1">Swipe to learn how to get started, or <a href="http://www.facebook.com" class="skip">SKIP</a></p>
         <div class="swipeCircles">
             <div class="selectedCircle"></div>
+            <div class="unselectedCircle"></div>
             <div class="unselectedCircle"></div>
             <div class="unselectedCircle"></div>
             <div class="unselectedCircle"></div>
@@ -23,11 +23,16 @@
 
 <template name="stepTwo">
     <div class="tutorialClass">
-        <h2 class="tutorialTitle">Step One</h2><br>
-        <h3 class="tutorialStep">Take a photo </h3>
+        <h2 class="tutorialTitle">Setup: Step One</h2>
+        <h3 class="intro">Set your trusted person </h3>
+        <div class="tutorialImage">
+            <img src="tutorialTrustedPerson.png">
+        </div>
+        <h5 class="intro">After you take a picture, they will receive a notification after a set amount of time</h5>
         <div class="swipeCircles">
             <div class="unselectedCircle"></div>
             <div class="selectedCircle"></div>
+            <div class="unselectedCircle"></div>
             <div class="unselectedCircle"></div>
             <div class="unselectedCircle"></div>
         </div>
@@ -36,9 +41,33 @@
 
 <template name="stepThree">
     <div class="tutorialClass">
-        <h2 class="tutorialTitle">Step Two</h2><br>
-        <h3 class="tutorialStep">Enter your trusted person </h3>
+        <h2 class="tutorialTitle">Setup: Step Two </h2>
+        <h3 class="tutorialStep">Set a four-digit notification deactivation pin code </h3>
+        <div class="tutorialImage">
+            <img src="tutorialSettingsCode.png">
+        </div>
+        <h5 class="tutorialStep">This is used to stop a notification from being sent to a trusted person </h5>
         <div class="swipeCircles">
+            <div class="unselectedCircle"></div>
+            <div class="unselectedCircle"></div>
+            <div class="selectedCircle"></div>
+            <div class="unselectedCircle"></div>
+            <div class="unselectedCircle"></div>
+        </div>
+    </div>
+</template>
+
+<template name="stepFour">
+    <div class="tutorialClass">
+        <h2 class="tutorialTitle">Use: Step One</h2>
+        <h3 class="tutorialStep">Take a photo of the risk</h3>
+        <div class="tutorialImage">
+            <img src="tutorialTakePhoto.png" class="image">
+        </div>
+        <h5 class="intro">This photo is stored on a secure server.</h5>
+        <h5 class="intro">It is impossible to delete for a minimum of 7 days.</h5>
+        <div class="swipeCircles">
+            <div class="unselectedCircle"></div>
             <div class="unselectedCircle"></div>
             <div class="unselectedCircle"></div>
             <div class="selectedCircle"></div>
@@ -47,14 +76,19 @@
     </div>
 </template>
 
-<template name="stepFour">
+<template name="stepFive">
     <div class="tutorialClass">
-        <h2 class="tutorialTitle">Step Three</h2><br>
-        <h3 class="tutorialStep">Mark "I'm Safe" </h3>
+        <h2 class="tutorialTitle">Use: Step Two</h2>
+        <h3 class="tutorialStep">Mark "I'm Safe" when safe </h3>
+        <div class="tutorialImage">
+            <img src="tutorialMarkSafe.png" class="image">
+        </div>
+        <h5 class="tutorialStep">Your trusted person won't receive a notification</h5>
         <div class="doneButton">
             <button id="tutorialDone">DONE</button>
         </div>
         <div class="swipeCircles">
+            <div class="unselectedCircle"></div>
             <div class="unselectedCircle"></div>
             <div class="unselectedCircle"></div>
             <div class="unselectedCircle"></div>
