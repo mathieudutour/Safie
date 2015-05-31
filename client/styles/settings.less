@@ -1,0 +1,103 @@
+@import 'common/variables';
+
+.settings {
+  background: #FFF;
+  .header {
+    background: @nephritis;
+    .camera {
+      position: absolute;
+      color: #FFF;
+      left: 0px;
+      top: 0px;
+      height: 66px;
+      width: 75px;
+      font-size: 1.5em;
+      padding-left: 10px;
+      padding-top: 25px;
+    }
+  }
+}
+
+#settingsTitle {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
+.textfield-dark {
+  border-radius: 0;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: 16px;
+  outline-width: 0;
+  color: black;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: -4px;
+}
+
+.settingsBtn {
+  text-align: center;
+  border-radius: 25px;
+  border: 1px solid @nephritis;
+  background-color: white;
+  color: @nephritis;
+  width: 290px;
+  margin: 0 auto;
+  padding: 0.5em;
+  font-size: 16px;
+  display: block;
+  height: 40px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.settingsClass {
+ background-color: white;
+}
+
+.settingSubsectionTitle {
+  margin: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: @nephritis;
+}
+
+.personalSettings {
+    overflow: auto;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.notificationSettings {
+    overflow: auto;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.settingSubsection {
+    margin: 15px;
+}
+
+.full-settings {
+  height: ~'calc(100% - 66px)';
+  overflow-y: scroll;
+}
+
+.settingsBtns {
+ margin-top: 35px;
+}

@@ -1,4 +1,4 @@
-Swiper = new Swipe(['camera', 'settings', 'history'])
+@Swiper = new Swipe(['camera', 'settings', 'history'])
 
 Template.center.helpers
   Swiper: -> Swiper

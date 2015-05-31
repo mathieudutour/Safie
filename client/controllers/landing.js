@@ -1,8 +1,8 @@
 Template.landing.events ({
-  'click .login': function(){
+  'click .login-button': function(){
     Router.goToPage(Router.Page.LOGIN);
   },
-  'click .signup': function(){
+  'click .signup-button': function(){
     Router.goToPage(Router.Page.SIGNUP);
   }
 });

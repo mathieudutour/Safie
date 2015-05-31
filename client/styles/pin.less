@@ -1,0 +1,60 @@
+@import 'common/variables';
+
+.pincode {
+  width: 100%;
+  height: 100%;
+  background-color: @pomegranate;
+  padding-top: 8vh;
+
+  #pinView input[type=password]{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 2em;
+    border-bottom: 1px solid #FFF;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    outline: 0;
+    margin-right: 10px;
+    background: transparent;
+    color: #FFF;
+  }
+
+  .enteredPin {
+      text-align: center;
+  }
+
+  .pinButton {
+    outline: none;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #FFF;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    margin-right: 15px;
+    margin-top: 10px;
+    color: #FFF;
+  }
+
+  .keypad {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .pin-submit {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: 1px solid #FFF;
+    background: transparent;
+    color: #FFF;
+    border-radius: 25px;
+    height: 50px;
+    width: 280px;
+    padding: 0.5em;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}

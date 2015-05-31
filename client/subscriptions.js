@@ -1,3 +1,2 @@
-Tracker.autorun( function() {
-//	Meteor.subscribe("party", Session.get("partyId"));
-});
+Meteor.subscribe("history");
+Meteor.subscribe("last");

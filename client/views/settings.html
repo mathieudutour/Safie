@@ -1,0 +1,41 @@
+<template name="settings">
+  <header class="header">
+    <i class="camera ion-ios-camera"></i>
+    <h2>Settings</h2>
+  </header>
+  <div  class="scrollable full-settings">
+    <form>
+      <div class="settingSubsectionTitle"> PERSONAL </div>
+      <div class="settingSubsection">
+
+        <div class="label">Name</div>
+        <input class="textfield-dark" type="text" value="{{currentUser.profile.name}}" id="name"><br>
+
+        <div class="label">Deactivation Code</div>
+        <input class="textfield-dark" type="password" id="code"><br>
+
+      </div>
+
+
+      <div class="settingSubsectionTitle"> NOTIFICATIONS </div>
+      <div class="settingSubsection">
+
+        <div class="label">Trusted Person's Email</div>
+        <input class="textfield-dark" type="email" value="{{currentUser.profile.trusted}}" id="trusted"><br>
+
+        <div class="label">Min Storage Days</div>
+        <input class="textfield-dark" type="number" min="1" value="{{currentUser.profile.timeoutDelete}}" id="delete"><br>
+
+        <div class="label">Notification Time (minutes)</div>
+        <input class="textfield-dark" type="number" min="0" value="{{currentUser.profile.timeoutNotification}}" id="notif"><br>
+
+      </div>
+      <div class="settingsBtns">
+          <button class="settingsBtn" id="submitSettings">Submit Changes</button>
+          <button class="settingsBtn" id="logout">Log out!</button>
+      </div>
+
+  </form>
+  </div>
+
+</template>

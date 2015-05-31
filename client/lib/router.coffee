@@ -10,6 +10,10 @@
   SIGNUP:
     index: 2
     url: '/signup'
+  PIN:
+    index: 3
+    url: '/pin'
+    protected: true
 
 Meteor.startup () ->
   paths = window.location.pathname

@@ -4,5 +4,8 @@ Template.router.helpers({
   },
   signupPage: function () {
       return Router.isCurrentPage(Router.Page.SIGNUP);
+  },
+  pinPage: function () {
+      return Router.isCurrentPage(Router.Page.PIN);
   }
 });

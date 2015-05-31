@@ -19,18 +19,31 @@ html, body {
   overflow-y: auto;
 }
 
+.header {
+  height: 66px;
+  padding-top: 22px;
+  h2 {
+    margin: 0;
+    margin-top: 9px;
+    text-align: center;
+    font-size: 1em;
+    color: #FFF;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
 .back {
   background: transparent;
-  border: 0px solid @primary-color;
-  float: left;
+  border: 0px;
   width: 40px;
   height: 50px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-image: url('/images/back.svg');
-  background-position: center;
   font-size: 20px;
-  color: cornsilk;
+  color: #FFF;
+  position: absolute;
+  left: 0;
+  top: 60%;
 }
 
 .clearfix {
@@ -39,16 +52,12 @@ html, body {
 
 a {
   text-decoration: none;
-  color: @inverse-color;
+  color: #FFF;
   cursor: pointer;
 }
 
 a:active, a:hover {
   text-decoration: underline;
-}
-
-.inverse {
-  color: @secondary-color;
 }
 
 .hide {
@@ -61,12 +70,4 @@ a:active, a:hover {
 
 .leave-down {
   .animation(down @time-factor*500ms linear forwards);
-}
-
-hr {
-  clear: both;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0px solid @primary-color;
-  border-bottom: 1px solid #e1e4e6;
 }
