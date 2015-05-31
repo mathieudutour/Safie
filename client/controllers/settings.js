@@ -22,6 +22,10 @@ Template.settings.events({
       } else {
         Session.set('success', 'Changes saved');
       }
+      Meteor.setTimeout(function() {
+         Session.set('success', null);
+         Session.set('error', null);
+       }, 3000);
     });
 
     if (code && code !== "") {

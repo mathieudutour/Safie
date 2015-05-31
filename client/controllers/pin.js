@@ -117,6 +117,10 @@ Template.pincode.events({
           Session.set('error', 'Safies released');
       }
       Router.goToPage(Router.Page.LANDING);
+      Meteor.setTimeout(function() {
+         Session.set('success', null);
+         Session.set('error', null);
+       }, 3000);
     });
   }
 });

@@ -14,6 +14,10 @@ Template.login.events({
      } else {
        Router.goToPage(Router.Page.LANDING);
      }
+     Meteor.setTimeout(function() {
+       Session.set('success', null);
+       Session.set('error', null);
+     }, 3000);
    });
  },
 
@@ -48,6 +52,10 @@ Template.signup.events({
      } else {
        Router.goToPage(Router.Page.LANDING);
      }
+     Meteor.setTimeout(function() {
+       Session.set('success', null);
+       Session.set('error', null);
+     }, 3000);
    });
  },
 
