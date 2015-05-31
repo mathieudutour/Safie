@@ -110,11 +110,11 @@ Template.pincode.events({
     Session.set('success', null);
     Session.set('error', null);
 
-    Meteor.call('security_code', code, function(success) {
-      if (success) {
-          Session.set('success', 'Safe and Sound :)');
+    Meteor.call('security_code', code, function(result) {
+      if (result.success) {
+        Session.set('success', 'Safe and Sound :)');
       } else {
-          Session.set('error', 'Safies released');
+        Session.set('error', 'Safies released');
       }
       Router.goToPage(Router.Page.LANDING);
       Meteor.setTimeout(function() {

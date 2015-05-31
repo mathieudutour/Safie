@@ -9,7 +9,7 @@ Meteor.methods({
       var lastPicture = Pictures.findOne({userId: this.userId}, {sort: [['createdAt', -1]], limit: 1});
       if(parseInt(user.profile.code) === code) {
         Pictures.update({_id: lastPicture._id}, {$set: {triggered: false}});
-        future.return(true);
+        future.return({success: true});
       } else {
         Pictures.update({_id: lastPicture._id}, {$set: {triggered: true}});
         if (user.profile.trusted) {
@@ -20,7 +20,7 @@ Meteor.methods({
             html: EmailTemplate.check(user, lastPicture)
           });
         }
-        future.return(false);
+        future.return({success: false});
       }
 
       return future.wait();
